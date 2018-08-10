@@ -1,0 +1,110 @@
+<html>
+<head>
+
+    <!-- Style(s) here -->
+    <link rel="stylesheet" href="./assets/style.css">
+
+    <!-- Script(s) here -->
+    <script type=text/javascript src="./assets/calculator.js"></script>
+</head>
+
+<body>
+    <div class="calculator">
+        <form name="Calculate">
+            <table>
+                <tr>
+                    <td>
+
+                        <input type="text" name="status" id="status" class="status" disabled>
+
+                        <input type="text" name="Input" id="answer" class="answerForm" disabled>
+                        <p class="calcBrand"> <strong>Calculator</strong></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="powerButton">
+                            <button type="button" class="btn-all powerButtonSize" id="turn-on" name="turn-on" value="turn-on" onclick="turnOn()">On</button>
+                            <button type="button" class="btn-all powerButtonSize" id="turn-off" name="turn-off" value="turn-off" onclick="turnOff()">Off</button>
+                        </div>
+                        <br>
+
+                        <button type="button" class="btn-all eraseButton" id="erase powerErase" name="erase" value="ce" onclick="backSpace()"> DEL</button>
+                        <button type="button" class="btn-all eraseButton" id="powerClear" name="clear" value="c" onclick="Calculate.Input.value = '' "> C</button>
+
+                        <button type="button" class="btn-all mathButtons" id="powerSqrt" name="" value="sqrt" onclick="calcSqrt(Calculate)">√</button>
+                        <button type="button" class="btn-all mathButtons" id="powerPow" name="" value="power2" onclick="calcX2(Calculate)">x2</button>
+
+                        <button type="button" class="btn-all number" id="power7" name="7" value="7" onclick="Calculate.Input.value += '7' "> 7</button>
+                        <button type="button" class="btn-all number" id="power8" name="8" value="8" onclick="Calculate.Input.value += '8' "> 8</button>
+                        <button type="button" class="btn-all number" id="power9" name="9" value="9" onclick="Calculate.Input.value += '9' "> 9</button>
+
+                        <button type="button" class="btn-all operator" id="powerAdd" name="add" value="+" onclick="Calculate.Input.value += '+' "> +</button>
+
+                        <button type="button" class="btn-all" id="power4" name="4" value="4" onclick="Calculate.Input.value += '4' "> 4</button>
+                        <button type="button" class="btn-all" id="power5" name="5" value="5" onclick="Calculate.Input.value += '5' "> 5</button>
+                        <button type="button" class="btn-all" id="power6" name="6" value="6" onclick="Calculate.Input.value += '6' "> 6</button>
+
+                        <button type="button" class="btn-all operator" id="powerSubtract" name="minus" value="-" onclick="Calculate.Input.value += '-'"> -</button>
+
+                        <button type="button" class="btn-all" id="power1" name="1" value="1" onclick="Calculate.Input.value += '1' "> 1</button>
+                        <button type="button" class="btn-all" id="power2" name="2" value="2" onclick="Calculate.Input.value += '2' "> 2</button>
+                        <button type="button" class="btn-all" id="power3" name="3" value="3" onclick="Calculate.Input.value += '3' "> 3</button>
+
+                        <button type="button" class="btn-all operator" id="powerMultiplty" name="times" value="*" onclick="Calculate.Input.value += '*' "> &#215;</button>
+
+                        <button type="button" class="btn-all" id="power0" name="0" value="0" onclick="Calculate.Input.value += '0' "> 0</button>
+
+                        <button type="button" class="btn-all" id="powerPoint" name="point" value="." onclick="Calculate.Input.value += '.' "> .</button>
+                        <button type="button" class="btn-all equals" id="powerEquals" name="equals" value="=" onclick="calculateResult(Calculate)"> =</button>
+
+                        <button type="button" class="btn-all operator" id="powerDivide" name="divide" value="/" onclick="Calculate.Input.value += '/' "> &#247;</button>
+
+                        <button type="button" class="btn-all mathButtons" id="powerCos" name="" value="cos" onclick="calcCos(Calculate)">cos</button>
+                        <button type="button" class="btn-all mathButtons" id="powerSin" name="" value="sin" onclick="calcSin(Calculate)">sin</button>
+                        <button type="button" class="btn-all mathButtons" id="powerTan" name="" value="tan" onclick="calcTan(Calculate)">tan</button>
+
+                        <button type="button" class="btn-all mathButtons" id="powerLog" name="" value="log" onclick="calcln(Calculate)">log</button>
+                        <!-- <button type="button" class="btn-all mathButtons" id="powerExp" name="" value="exp" onclick="calcExp(Calculate)">exp</button> -->
+                        <br>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#status").css('background-color', '#e62e00');
+            $("#power9").attr('disabled', 'disabled');
+            $("#power8").attr('disabled', 'disabled');
+            $("#power7").attr('disabled', 'disabled');
+            $("#power6").attr('disabled', 'disabled');
+            $("#power5").attr('disabled', 'disabled');
+            $("#power4").attr('disabled', 'disabled');
+            $("#power3").attr('disabled', 'disabled');
+            $("#power2").attr('disabled', 'disabled');
+            $("#power1").attr('disabled', 'disabled');
+            $("#power0").attr('disabled', 'disabled');
+
+            $("#powerPoint").attr('disabled', 'disabled');
+            $("#powerEquals").attr('disabled', 'disabled');
+            $("#powerAdd").attr('disabled', 'disabled');
+            $("#powerSubtract").attr('disabled', 'disabled');
+            $("#powerMultiplty").attr('disabled', 'disabled');
+            $("#powerDivide").attr('disabled', 'disabled');
+
+            $("#powerCos").attr('disabled', 'disabled');
+            $("#powerSin").attr('disabled', 'disabled');
+            $("#powerTan").attr('disabled', 'disabled');
+            $("#powerSqrt").attr('disabled', 'disabled');
+            $("#powerLog").attr('disabled', 'disabled');
+         /*   $("#powerExp").attr('disabled', 'disabled'); */
+            $("#powerPow").attr('disabled', 'disabled');
+        });
+    </script>
+</body>
+
+</html>
